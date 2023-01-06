@@ -10,7 +10,9 @@
     "format": "prettier -w src/**/*.jsx",
     "lint": "eslint src/**/*.jsx",
     "lint-fix": "eslint src/**/*.jsx --cache --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tail-build": "tailwindcss -i ./src/index.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/index.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -21,11 +23,14 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "autoprefixer": "^10.4.13",
     "eslint": "^8.31.0",
     "eslint-plugin-react": "^7.31.11",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "postcss": "^8.4.20",
     "prettier": "^2.8.1",
+    "tailwindcss": "^3.2.4",
     "vite": "^4.0.0"
   },
   "lint-staged": {
